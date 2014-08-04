@@ -10,13 +10,12 @@ ctr = 1
 sums = 0
 
 def roll():
-	global die1 #= random.randint(1,6)
-	global die2 #= random.randint(1,6)
-	global die3 #= random.randint(1,6)
-	global die4 #= random.randint(1,6)
-	global die5 #= random.randint(1,6)
+	global die1
+	global die2 
+	global die3 
+	global die4 
+	global die5 
 	global ctr
-	global sums
 
 	die1 = random.randint(1,6)
 	die2 = random.randint(1,6)
@@ -28,28 +27,10 @@ def roll():
 
 
 def compare(d1,d2,d3,d4,d5):
-	if d1 != d2:
-		return False
-	elif d1 != d3:
-		return False
-	elif d1 != d4:
-		return False
-	elif d1 != d5:
-		return False
-	elif d2 != d3:
-		return False
-	elif d2 != d4:
-		return False
-	elif d2 != d5:
-		return False
-	elif d3 != d4:
-		return False
-	elif d3 != d5:
-		return False
-	elif d4 != d5:
-		return False
-	else:
+	if d1 == d2 == d3 == d4 == d5:
 		return True
+	else:
+		return False
 
 
 for i in range(0,1000):
